@@ -1,10 +1,10 @@
 <script setup>
-import ArticleList from "./components/ArticleList.vue";
+import ArticleItem from "./ArticleItem.vue";
 </script>
 
 <template>
   <div>
-    <ArticleList />
+    <ArticleItem />
   </div>
 </template>
 
