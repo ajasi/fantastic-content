@@ -14,8 +14,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <ArticleItem />
+  <div v-for="article in state.articles" :key="article.url">
+    <ArticleItem :article="article" />
   </div>
 </template>
 
