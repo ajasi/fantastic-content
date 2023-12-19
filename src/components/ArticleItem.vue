@@ -5,6 +5,10 @@ const props = defineProps({
     required: true,
   },
 });
+const formatDate = (date) => {
+  const options = { month: "long", day: "numeric" };
+  return new Date(date).toLocaleDateString("en-US", options);
+};
 </script>
 
 <template>
@@ -12,7 +16,7 @@ const props = defineProps({
     <span class="article-link">
       <a :href="article.url">{{ article.title }}</a>
     </span>
-    <span class="publish-date">{{ article.publishDate }}</span>
+    <span class="publish-date">{{ formatDate(article.publishDate) }}</span>
   </div>
 </template>
 
