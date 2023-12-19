@@ -20,4 +20,34 @@ const formatDate = (date) => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.article-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+.article-link {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+
+  a {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.publish-date {
+  white-space: nowrap;
+}
+</style>
