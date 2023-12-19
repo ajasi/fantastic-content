@@ -42,6 +42,7 @@ const filteredArticles = computed(() => {
       <div v-for="article in filteredArticles" :key="article.publishDate">
         <ArticleItem :article="article" />
       </div>
+      <div v-if="filteredArticles.length === 0" class="no-data">No Data</div>
     </div>
   </div>
 </template>
@@ -78,5 +79,9 @@ const filteredArticles = computed(() => {
       }
     }
   }
+}
+.no-data {
+  margin-top: 20px;
+  text-align: center;
 }
 </style>
